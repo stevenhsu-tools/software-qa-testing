@@ -8,7 +8,7 @@ Fill in every field. If something genuinely isn't known, write `Unknown` or `TBD
 
 **Title:** *One-line summary — specific enough to distinguish this from other bugs at a glance.*
 
-**Description:** *What's wrong, in a sentence or two. What happened vs. what should have happened.*
+**Description:** *What's wrong, in a sentence or two. What happened vs. what should have happened. If this came from a QA test report, note the case's Verification Method here too (e.g. "found via automated execution" vs. "found by tracing the code, not yet run") so whoever picks this up knows how strong the evidence is.*
 
 **Severity:** `High` / `Medium` / `Low` / `Minor` *(see SKILL.md severity table — judge by damage to the product, not personal annoyance)*
 
@@ -20,7 +20,7 @@ Fill in every field. If something genuinely isn't known, write `Unknown` or `TBD
 
 **Environment:** *OS, hardware, configuration, browser/runtime version — whatever is relevant to reproduce it.*
 
-**Test Case:** *Which test case (if any) uncovered this.*
+**Test Case:** *Which test case ID (e.g. TC-003) uncovered this, if any — this is what cross-references back to the QA test report and the code location it was derived from.*
 
 **Date Submitted:** *Date found.*
 

@@ -1,10 +1,10 @@
 # Software QA Testing — Claude Code Skill
 
-A [Claude Code skill](https://code.claude.com/docs/en/skills) that packages a professional QA testing methodology end to end: testing types and techniques, white-box/black-box test design, test-case design techniques (boundary, functional, configuration, stage, stress, error handling, regression), generating the test cases themselves before testing starts, rolling executed results into a QA test report, and a bug-report generator that classifies defects by **Severity** (High/Medium/Low/Minor) and **Priority** (1–5), following an IEEE-829-based field set.
+A [Claude Code skill](https://code.claude.com/docs/en/skills) that packages a professional QA testing methodology end to end: testing types and techniques, white-box/black-box test design, test-case design techniques (boundary, functional, configuration, stage, stress, error handling, regression), generating test cases **by reading the actual code** (no spec/PRD required), conducting the testing and rolling results into a QA test report, and a bug-report generator that classifies defects by **Severity** (High/Medium/Low/Minor) and **Priority** (1–5), following an IEEE-829-based field set.
 
-The intended flow: **generate test cases** → **run them and log a QA test report** (how many ran, pass/fail counts) → **generate a bug report for every failure**, with the bug's Severity/Priority and repro details pulled straight from the failed test case rather than re-derived from scratch.
+The intended flow: **confirm the goal** (test cases only, or the full pipeline) → **generate test cases from the code** → **conduct the testing and log a QA test report** (how many ran, pass/fail counts, and whether each case was actually executed or just traced by reading the code) → **generate a bug report for every failure**, with the bug's Severity/Priority and repro details pulled straight from the failed test case rather than re-derived from scratch.
 
-Once installed, Claude will use this skill automatically when you're planning test coverage, designing test cases, logging test results, or writing up a bug — or you can invoke it directly by typing `/software-qa-testing`.
+Once installed, Claude will use this skill automatically when you're planning test coverage, designing test cases for a piece of code, logging test results, or writing up a bug — or you can invoke it directly by typing `/software-qa-testing`. When you invoke it to start a testing effort, it asks upfront whether you want test cases only or the full design → test → report pipeline.
 
 ## What's in this repo
 
@@ -72,8 +72,9 @@ Once installed, either:
 ### Example prompts
 
 - "We're about to test our new checkout flow — what should QA cover?"
-- "Generate test cases for the password reset feature before we start testing." *(Part 2 — test cases, all `Not Run`)*
-- "Here are the results from running those test cases: [...]. Give me a QA test report." *(Part 3 — pass/fail counts and a list of failures)*
+- "Generate test cases for `src/checkout/payment.py`." *(Part 2 — scans the code, no spec needed; Claude first asks whether you want test cases only or the full pipeline)*
+- "Design test cases for the password reset module, then run them and give me a bug report for anything that fails." *(full pipeline in one request — goal is unambiguous, so Claude states the path and proceeds through Parts 2 → 3 → 4)*
+- "Here are the results from running those test cases: [...]. Give me a QA test report." *(Part 3 — pass/fail counts, a list of failures, and how many were actually executed vs. traced by reading the code)*
 - "Turn the failed test cases in that report into bug reports." *(Part 4 — one bug report per failure, Severity/Priority pulled from the test report)*
 - "Write up a bug report: the app freezes exporting more than 5000 rows to CSV, build 4.2.1, Windows 11, happens every time, we ship Tuesday." *(ad hoc bug report, no test report needed)*
 - "What's the difference between severity and priority, and what fields should our bug tracker have?"

@@ -4,17 +4,17 @@ Use this after test cases (see `test-case-template.md`) have been executed. This
 
 ## Header
 
-**Report Title:** *e.g. "QA Test Report — Checkout Flow, Build 4.2.1"*
+**Report Title:** *e.g. "QA Test Report — Checkout Module, src/checkout/"*
 
-**Feature / Requirement Under Test:** *What was tested.*
+**Feature / Code Under Test:** *What was tested — reference the file(s)/function(s) from the test case set's "Code Scanned" field.*
 
-**Build / Version Tested:** *Build number.*
+**Build / Version Tested:** *Build number, commit hash, or branch — whatever identifies the code state tested.*
 
 **Date:** *Date report generated.*
 
-**Tester(s):** *Who ran the cases.*
+**Tester(s):** *Who ran the cases (a person, or "Claude" if you conducted the testing yourself).*
 
-**Environment(s):** *OS/browser/config the cases were run in.*
+**Environment(s):** *OS/browser/config/runtime the cases were run in.*
 
 ## Summary
 
@@ -28,6 +28,11 @@ Compute Pass Rate as Passed ÷ (Total − Not Run), so incomplete runs aren't sc
 | Blocked | |
 | Not Run | |
 | **Pass Rate** (Passed ÷ (Total − Not Run)) | |
+| Executed (automated) | |
+| Executed (manual walkthrough) | |
+| Traced (code read, not run) | |
+
+The last three rows matter for how much confidence to place in the results above — a report built mostly from `Traced` cases is a code review, not a test run, and should be presented to the reader with that caveat.
 
 ## Breakdown by test type / technique
 
@@ -45,9 +50,9 @@ Compute Pass Rate as Passed ÷ (Total − Not Run), so incomplete runs aren't sc
 
 List every failed case in full — this section feeds bug-report generation directly, so don't summarize it away. Leave **Bug ID** blank until a bug report has actually been generated for that row.
 
-| Test Case ID | Title | Expected Result | Actual Result | Suggested Severity | Bug ID |
-|---|---|---|---|---|---|
-| TC-00X | | | | | *(pending)* |
+| Test Case ID | Title | Source Location | Expected Result | Actual Result | Verification Method | Suggested Severity | Bug ID |
+|---|---|---|---|---|---|---|---|
+| TC-00X | | | | | | | *(pending)* |
 
 ## Blocked / Not Run cases (if any)
 
