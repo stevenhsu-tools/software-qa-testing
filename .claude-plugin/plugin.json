@@ -1,0 +1,9 @@
+{
+  "name": "software-qa-testing",
+  "description": "Software QA testing methodology skill: testing types/techniques/approach, test case generation, QA test reports, and bug reports classified by Severity and Priority.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Steven Hsu"
+  },
+  "repository": "https://github.com/stevenhsu-tools/software-qa-testing"
+}

@@ -1,0 +1,17 @@
+{
+  "name": "software-qa-testing-marketplace",
+  "description": "Marketplace for the software-qa-testing Claude Code skill/plugin.",
+  "version": "1.0.0",
+  "owner": {
+    "name": "Steven Hsu"
+  },
+  "repository": "https://github.com/stevenhsu-tools/software-qa-testing",
+  "plugins": [
+    {
+      "name": "software-qa-testing",
+      "source": "./",
+      "description": "Software QA testing methodology and bug-report generation with Severity/Priority classification.",
+      "version": "1.0.0"
+    }
+  ]
+}
