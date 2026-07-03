@@ -1,0 +1,20 @@
+{
+  "name": "software-qa-testing",
+  "interface": {
+    "displayName": "Software QA Testing"
+  },
+  "plugins": [
+    {
+      "name": "software-qa-testing",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

@@ -12,7 +12,7 @@ Use this after test cases (see `test-case-template.md`) have been executed. This
 
 **Date:** *Date report generated.*
 
-**Tester(s):** *Who ran the cases (a person, or "Claude" if you conducted the testing yourself).*
+**Tester(s):** *Who ran the cases (a person, or the AI agent e.g. Claude/Codex/Antigravity if they conducted the testing).*
 
 **Environment(s):** *OS/browser/config/runtime the cases were run in.*
 

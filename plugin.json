@@ -1,0 +1,16 @@
+{
+  "name": "software-qa-testing",
+  "version": "1.0.0",
+  "description": "Software QA testing methodology skill: test case generation, QA test reports, and bug reports classified by Severity and Priority.",
+  "author": {
+    "name": "Steven Hsu"
+  },
+  "license": "MIT",
+  "keywords": [
+    "qa",
+    "testing",
+    "test-cases",
+    "bug-reports",
+    "defects"
+  ]
+}

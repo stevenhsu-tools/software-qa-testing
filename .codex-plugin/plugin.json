@@ -1,0 +1,35 @@
+{
+  "name": "software-qa-testing",
+  "version": "1.0.0",
+  "description": "Software QA testing methodology skill: test case generation, QA test reports, and bug reports classified by Severity and Priority.",
+  "author": {
+    "name": "Steven Hsu",
+    "url": "https://github.com/stevenhsu-tools"
+  },
+  "repository": "https://github.com/stevenhsu-tools/software-qa-testing",
+  "license": "MIT",
+  "keywords": [
+    "qa",
+    "testing",
+    "test-cases",
+    "bug-reports",
+    "defects"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Software QA Testing",
+    "shortDescription": "Generate code-driven test cases, QA reports, and structured bug reports.",
+    "longDescription": "A reusable QA workflow for Codex that designs test cases from source code, records execution results in a QA report, and turns failures into structured bug reports with Severity and Priority.",
+    "developerName": "Steven Hsu",
+    "category": "Productivity",
+    "capabilities": [
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Generate test cases for this module.",
+      "Run a QA pass and report bugs.",
+      "Write a bug report from this failure."
+    ],
+    "brandColor": "#2563EB"
+  }
+}

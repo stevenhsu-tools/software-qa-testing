@@ -55,7 +55,7 @@ Special Testing needs more time/people/equipment and is usually scheduled as its
 
 ---
 
-## 4. Test Case Design Techniques (Chapter 8)
+## 4. Test Case Design Techniques
 
 These are the practical lenses for actually writing test cases, once you've decided which testing *type* you're doing.
 
